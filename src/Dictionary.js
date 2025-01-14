@@ -29,13 +29,13 @@ const Dictionary = () => {
 
   return (
     <div className="app-container">
-      <h1>XDictionary</h1>
+      <h1>Dictionary App</h1>
 
       <div className="search-bar">
         {/* Input field for search term */}
         <input
           type="text"
-          placeholder="Enter a word"
+          placeholder="Search for a word..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
@@ -45,6 +45,7 @@ const Dictionary = () => {
       </div>
 
       {/* Display the result */}
+      <h5>Defintion:</h5>
       {result && (
         <div className="result">
           <p>{result}</p>
