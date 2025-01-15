@@ -13,7 +13,8 @@ const Dictionary = () => {
   const [result, setResult] = useState(null); // State for the search result
 
   // Function to handle the search
-  const handleSearch = () => {
+  const handleSearch = (e) => {
+    e.preventDefault();
     // Search for the word in the dictionary (case-insensitive)
     const foundWord = dictionary.find(
       (entry) => entry.word.toLowerCase() === searchTerm.toLowerCase()
