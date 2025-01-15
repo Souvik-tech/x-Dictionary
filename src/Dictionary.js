@@ -31,7 +31,7 @@ const Dictionary = () => {
     <div className="app-container">
       <h1>Dictionary App</h1>
 
-      <div className="search-bar">
+      <form className="search-bar" onSubmit={handleSearch}>
         {/* Input field for search term */}
         <input
           type="text"
@@ -41,11 +41,11 @@ const Dictionary = () => {
         />
         
         {/* Search button */}
-        <button onClick={handleSearch}>Search</button>
-      </div>
+        <button  type='submit'>Search</button>
+      </form>
 
       {/* Display the result */}
-      <h5>Defintion:</h5>
+      <h5>Definition:</h5>
       {result && (
         <div className="result">
           <p>{result}</p>
